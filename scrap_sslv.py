@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-# url = "https://www.ss.lv/ru/transport/cars/alfa-romeo/"
+url = "https://www.ss.lv/ru/transport/cars/alfa-romeo/"
 
 # headers = {
 #     "accept: */*",
@@ -19,14 +19,15 @@ from bs4 import BeautifulSoup
 #     f.write(src)
 
 
+reguest = requests.get(url)
 
-with open("scrap_sslv_2.html") as file:
-     src = file.read()
+soup = BeautifulSoup(reguest.text, "html.parser")
 
-soup = BeautifulSoup(src, "html.parser")
-all_cars = soup.find(class_="msga2 pp0")
-for cars in all_cars:
-    print(cars)
+cars = soup.find("td", class_="msga2 pp0").parent()
+
+
+for car in cars:
+    print(car)
 
 
 
