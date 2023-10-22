@@ -41,7 +41,7 @@ for car in cars:
 # def get_html(url):
 #     try:
 #         result = requests.get(url) # при помощи reguests берем данные с этого url
-#         result.raise_for_status() # для обработки исключений 
+#         result.raise_for_status() # для обработки исключений
 #         return result.text # если страница удачно скачена она будет внутри result.text
 #     except(requests.RequestException, ValueError): # RequestException получим если какая то сетевая проблема, ValueError если на стороне сервера возникла какая то проблема
 #         print("Сетевая ошибка")
@@ -65,10 +65,10 @@ for car in cars:
 #                 #transmission =     # КПП (string)
 #                 #mileage =   # пробег (integer)
 #                 #color =    # цвет (string)
-#                 #body_type =    # тип кузова (string) 
+#                 #body_type =    # тип кузова (string)
 #                 #inspection =  # техосмотр (datetime.date)
 #                 #price =    # цена (integer)
-#                 #foto = 
+#                 #foto =
 #             }
 #         )
 #     return result_cars
@@ -79,13 +79,15 @@ for car in cars:
 
 
 
+
+
 # if __name__ == "__main__":
 #     html = get_html("https://www.ss.lv/ru/transport/cars/alfa-romeo/")
-#     if html: 
-#         # with open("scrap_sslv.html", "w", encoding="utf8") as  f: # мы открыли файл на запись 
+#     if html:
+#         # with open("scrap_sslv.html", "w", encoding="utf8") as  f: # мы открыли файл на запись
 #         #    f.write(html)  # и записываем в него наши данные из html
 #         get_sslv_cars(html)
-            
+
 
 
 
